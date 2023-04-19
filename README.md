@@ -256,17 +256,36 @@ EXAMPLES:
 	}
 	else
 		echo "error fetching document: ".$snoopy->error."\n";
+	
+	Example:
+	
+	# composer.json in Laravel
+	"files": [
+		"vendor/geol/snoopy/Snoopy.class.php"
+	]
 
+	# ExampleClass.php
+	use geol\Snoopy\Snoopy as Snoopy;
+	
+	class ExampleClass {
+		function test {
+			$url = 'https://www.example.com';
+			$snoopy = new Snoopy();
+			$snoopy->fetch($url);
+		}
+	}
 
 COPYRIGHT:
-	Copyright(c) 1999,2000 ispi. All rights reserved.
+
+	Copyright(c) 1999-2023 ispi. All rights reserved.
 	This software is released under the GNU General Public License.
 	Please read the disclaimer at the top of the Snoopy.class.php file.
 
 
-THANKS:
-	Special Thanks to:
-	Peter Sorger <sorgo@cool.sk> help fixing a redirect bug
-	Andrei Zmievski <andrei@ispi.net> implementing time out functionality
-	Patric Sandelin <patric@kajen.com> help with fetchform debugging
-	Carmelo <carmelo@meltingsoft.com> misc bug fixes with frames
+THANKS: Special Thanks to:
+
+	- Peter Sorger <sorgo@cool.sk> help fixing a redirect bug
+	- Andrei Zmievski <andrei@ispi.net> implementing time out functionality
+	- Patric Sandelin <patric@kajen.com> help with fetchform debugging
+	- Carmelo <carmelo@meltingsoft.com> misc bug fixes with frames
+	- Geol	<big9401@gmail.com> fixing bugs

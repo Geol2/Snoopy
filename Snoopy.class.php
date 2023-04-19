@@ -5,8 +5,8 @@ namespace geol\Snoopy;
 /*************************************************
  *
  * Snoopy - the PHP net client
- * Author: Monte Ohrt <monte@ohrt.com>
- * Copyright (c): 1999-2014, all rights reserved
+ * Author: Monte Ohrt <monte@ohrt.com>, Geol <big9401@gmail.com>
+ * Copyright (c): 1999-2023, all rights reserved
  * Version: 2.0.0
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
