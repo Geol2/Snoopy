@@ -937,15 +937,6 @@ class Snoopy
 
         switch ($this->_submit_type) {
             case "application/x-www-form-urlencoded":
-                /* reset($formvars);
-                while (list($key, $val) = each($formvars)) {
-                    if (is_array($val) || is_object($val)) {
-                        while (list($cur_key, $cur_val) = each($val)) {
-                            $postdata .= urlencode($key) . "[]=" . urlencode($cur_val) . "&";
-                        }
-                    } else
-                        $postdata .= urlencode($key) . "=" . urlencode($val) . "&";
-                } */
                 foreach($formvars as $key => $val) {
                     if (is_array($val) || is_object($val)) {
                         foreach ($val as $cur_key => $cur_val) {
@@ -959,40 +950,6 @@ class Snoopy
 
             case "multipart/form-data":
                 $this->_mime_boundary = "Snoopy" . md5(uniqid(microtime()));
-
-                /*reset($formvars);
-                while (list($key, $val) = each($formvars)) {
-                    if (is_array($val) || is_object($val)) {
-                        while (list($cur_key, $cur_val) = each($val)) {
-                            $postdata .= "--" . $this->_mime_boundary . "\r\n";
-                            $postdata .= "Content-Disposition: form-data; name=\"$key\[\]\"\r\n\r\n";
-                            $postdata .= "$cur_val\r\n";
-                        }
-                    } else {
-                        $postdata .= "--" . $this->_mime_boundary . "\r\n";
-                        $postdata .= "Content-Disposition: form-data; name=\"$key\"\r\n\r\n";
-                        $postdata .= "$val\r\n";
-                    }
-                }
-
-                reset($formfiles);
-                while (list($field_name, $file_names) = each($formfiles)) {
-                    settype($file_names, "array");
-                    while (list(, $file_name) = each($file_names)) {
-                        if (!is_readable($file_name)) continue;
-
-                        $fp = fopen($file_name, "r");
-                        $file_content = fread($fp, filesize($file_name));
-                        fclose($fp);
-                        $base_name = basename($file_name);
-
-                        $postdata .= "--" . $this->_mime_boundary . "\r\n";
-                        $postdata .= "Content-Disposition: form-data; name=\"$field_name\"; filename=\"$base_name\"\r\n\r\n";
-                        $postdata .= "$file_content\r\n";
-                    }
-                }
-                $postdata .= "--" . $this->_mime_boundary . "--\r\n";*/
-
                 foreach ($formvars as $key => $val) {
                     if (is_array($val) || is_object($val)) {
                         foreach ($val as $cur_key => $cur_val) {
