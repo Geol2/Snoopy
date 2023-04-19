@@ -1,6 +1,6 @@
 NAME:
 
-	Snoopy - the PHP net client v2.0.0
+	Snoopy - the PHP net client v2.0.1
 	
 SYNOPSIS:
 
