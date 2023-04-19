@@ -1,7 +1,7 @@
-Monte Ohrt <monte@ispi.net>
+Monte Ohrt <monte@ohrt.com>
 	- main Snoopy work
 
-Andrei Zmievski <andrei@ispi.net>
+Andrei Zmievski <andrei@php.net>
 	- miscellaneous fixes
 	- read timeout support
 	- file submission capability
@@ -9,3 +9,9 @@ Andrei Zmievski <andrei@ispi.net>
 Gene Wood <gene_wood@users.sourceforge.net>
     - bug fixes
     - security fixes
+
+Thomas Hoger <thoger@redhat.com>
+    - CA certificate checks and security fixes
+
+Geol <big9401@gmail.com>
+    - remove each() at deprecated func

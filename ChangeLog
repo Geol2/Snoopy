@@ -1,3 +1,21 @@
+Version 2.0.1
+-------------
+
+    - each() remove
+
+Version 2.0.0
+-------------
+
+    - remove all dependancies on cUrl, use OpenSSH for SSL connections.
+    - add SSL certificate checking
+    - add getResults() method
+    - make methods chainable
+
+Version 1.2.5
+-------------
+
+    - fix command line escapement vulnerability with execution of curl binary on https fetches (mohrt, mstrokin)
+
 Version 1.2.4
 -------------
 
