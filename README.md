@@ -1,3 +1,13 @@
+```
+// composer
+"autoload": {
+        // ...
+        "files": [
+            "vendor/geol/snoopy/Snoopy.class.php"
+        ]
+    },
+```
+
 NAME:
 
 	Snoopy - the PHP net client v2.0.0
